@@ -1,25 +1,58 @@
 <?php
 
-echo "Hello World\n";
-echo "Hello World\n";
-$name = 'Olga';
-echo 'Hello ' . $name;
-echo "\n";
-$age = 18;
-echo 'Your name is ' . $name . ' and you are ' . $age . ' yaers old!';
-echo "\n";
+$array = array(1, 2, 3);
+var_dump($array);
+$array = [1, 2, 3];
+var_dump($array);
+$array = [
+    1,
+    'olga',
+    true ,
+    [1, 2, 3],
+    3.4,
+];
+var_dump($array);
+$array  = [
+    'name' => 'Olga',
+    'age' => '18',
+    'isFemale' => true,
+];
+var_dump($array);
 
-$var = 1;
-var_dump($var);
-$var = 1.3;
-var_dump($var);
-$var = 'Hellõ';
-var_dump($var);
-$var = true;
-var_dump($var);
-$var = false;
-var_dump($var);
-$bar = null;
-var_dump($bar);
+$array = [
+    100 => 1,
+    2,
+    'name' => 'Olga',
+    'age' => '18',
+    6,
+    'isFemale' => true,
+    3,
+    4,
+    5,
+];
+var_dump($array);
 
-?>
+$array = [1, 2, 3];
+
+var_dump($array[1]);
+$array = [
+    'name' => 'Olga',
+    'age' => '18',
+    'isFemale' => true,
+];
+var_dump($array['name']);
+
+$array = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+var_dump($array[2][1]);
+$array = [1,2,3];
+var_dump($array);
+array_push($array, 4);
+array_push($array, 5,6,7);
+$array[] = 8;
+var_dump($array);
+$array[1] = 'something else';
+var_dump($array);

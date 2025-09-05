@@ -1,54 +1,45 @@
 <?php
-$num =5;
-if($num > 5) {
-    var_dump('Bigger then 5');
-} elseif ($num === 5) {
-    var_dump('Equal to 5');
-} else {
-    var_dump('Smaller then 5');
+var_dump(PHP_INT_MAX);
+for($i=0; $i<10; $i++) {
+    var_dump($i);
 }
 
-$day = (int) date('N');
-var_dump($day);
+for($i=10; $i>0; $i--) {
+    var_dump($i);
+}
 
-if($day == 1) {
-    var_dump('Esmaspäev');
-} elseif($day == 2) {
-    var_dump('Teisipäev');
-} elseif($day == 3) {
-    var_dump('Kolmapäev');
-} elseif($day == 4) {
-    var_dump('Neljapäev');
-} elseif($day == 5) {
-    var_dump('Reede');
-} elseif($day == 6) {
-    var_dump('Laupäev');
-} elseif($day == 7) {
-    var_dump('Pühapäev');
-} 
+for($i=1; $i<1_000_000; $i*=2) {
+    var_dump($i);
+}
 
-switch($day) {
-    case 1:
-        var_dump('Esmaspäev');
-        break;
-    case 2:
-        var_dump('Teisipäev');
-        break;
-    case 3:
-        var_dump('Kolmapäev');
-        break;
-    case 4:
-        var_dump('Neljapäev');
-        break;
-    case 5:
-        var_dump('Reede');
-        break;
-    case 6:
-        var_dump('Laupäev');
-        break;
-    case 7:
-        var_dump('Pühapäev');
-        break;
-    default:
-    var_dump('Imelik päev');    
+$current = (int) date("s");
+
+// while($current<59) {
+//     var_dump($current);
+//     $current = (int) date("s");
+// }
+$i =10;
+
+while($i<10){
+    var_dump('While');
+}
+
+do {
+    var_dump('Do While');
+} while($i<10);
+
+$array = ['Apples', 'Oranges', 'Pears'];
+
+foreach($array as $value) {
+    var_dump($value);
+}
+
+$array = [
+    'name' => 'Olga',
+    'age' => '18',
+    'isFemale' => true,
+];
+
+foreach($array as $key => $value) {
+    var_dump($key, $value);
 }

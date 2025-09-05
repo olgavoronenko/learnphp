@@ -49,4 +49,6 @@ switch($day) {
     case 7:
         var_dump('Pühapäev');
         break;
+    default:
+    var_dump('Imelik päev');    
 }
